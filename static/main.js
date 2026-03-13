@@ -300,6 +300,11 @@ const handleSearchCompare = async () => {
     }
     
     renderDetailedCards(cards, "aqi-card-container");
+
+        // Clear search fields after successful search (elder-friendly)
+getElement("city1").value = "";
+getElement("city2").value = "";
+getElement("city1").focus();
 };
 
 
