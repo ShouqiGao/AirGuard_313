@@ -1,0 +1,56 @@
+{
+  "api": {
+    "popular_cities": [
+      "Kuala Lumpur",
+      "George Town",
+      "Kuching",
+      "Johor Bahru",
+      "Malacca",
+      "Seremban",
+      "Kota Kinabalu",
+      "Petaling Jaya"
+    ]
+  },
+  "aqi_levels": [
+    {
+      "min": 0,
+      "max": 50,
+      "level": "Good",
+      "color": "#10b981",
+      "text_color": "#fff",
+      "advice": "Air quality is satisfactory. Safe to enjoy outdoor activities."
+    },
+    {
+      "min": 51,
+      "max": 100,
+      "level": "Moderate",
+      "color": "#eab308",
+      "text_color": "#000",
+      "advice": "Air quality is moderate. Sensitive groups should limit outdoor activity."
+    },
+    {
+      "min": 101,
+      "max": 150,
+      "level": "Unhealthy for Sensitive Groups",
+      "color": "#f97316",
+      "text_color": "#fff",
+      "advice": "Sensitive groups may experience health effects. General public less affected."
+    },
+    {
+      "min": 151,
+      "max": 200,
+      "level": "Unhealthy",
+      "color": "#ef4444",
+      "text_color": "#fff",
+      "advice": "General public may experience health effects. Avoid outdoor activities."
+    },
+    {
+      "min": 201,
+      "max": 99999,
+      "level": "Hazardous",
+      "color": "#7c3aed",
+      "text_color": "#fff",
+      "advice": "Health alert! Entire population at risk. Remain indoors."
+    }
+  ]
+}

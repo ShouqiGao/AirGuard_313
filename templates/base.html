@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AirGuard - We see the air you breathe{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/iriszhang1121/images/master/uPic/1971773217685_.pic_JPiBN3.jpg" alt="AirGuard Logo" class="logo-img">
+                <span class="logo-text">AirGuard</span>
+                <span class="logo-subtext">We see the air you breathe</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-home">Home</a></li>
+                <li><a href="/about" class="nav-about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-sky">
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>
+                    AirGuard provides real-time air quality data for Malaysia. 
+                    We believe clean air is a fundamental right and transparency is key to protecting it.
+                </p>
+            </div>
+
+            <!-- Data Sources Section -->
+            <div class="footer-section">
+                <h3>Data Sources</h3>
+                <ul>
+                    <li><a href="https://www.doe.gov.my/" target="_blank">Malaysia Department of Environment (DOE)</a></li>
+                    <li><a href="https://aqicn.org/" target="_blank">AQICN</a></li>
+                </ul>
+            </div>
+
+            <!-- Links Section -->
+            <div class="footer-section">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About AirGuard</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 AirGuard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

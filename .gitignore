@@ -1,0 +1,38 @@
+# ======================
+# Virtual Environments
+# ======================
+venv/
+ENV/
+env/
+.venv/
+
+# ======================
+# Log Files
+# ======================
+*.log
+*.out
+*.err
+logs/
+log/
+
+# ======================
+# Temporary Files
+# ======================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak   # Backup files
+
+# Python Cache / Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+
+# ======================
+# IDE / Editor Files (Optional)
+# ======================
+.vscode/
+.idea/

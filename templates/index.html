@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}AirGuard - Monitor Air Quality{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>🌍 AirGuard</h1>
+        <p class="tagline">Focus on Air Quality, Live a Healthy Life</p>
+        <p class="hero-description">Real-time air quality monitoring for a healthier tomorrow</p>
+    </div>
+
+    <!-- Search Container -->
+    <div id="search-container">
+        <div>
+            <input id="city1" placeholder="Enter your city here" autocomplete="off">
+            <input id="city2" placeholder="Choose another city for comparison" autocomplete="off">
+            <button id="go-btn">Search</button>
+        </div>
+        <div id="search-error" class="search-error"></div>
+    </div>
+
+    <!-- Current Search Section -->
+    <h2 class="section-header">🛰️ Search & Compare Air Quality</h2>
+    <div id="aqi-card-container" class="card-container"></div>
+
+    <!-- Popular Cities Section -->
+    <h2 class="section-header">🧭 Popular Cities</h2>
+    <div id="popular-container"></div>
+
+
+
+    <!-- Daily Subscription Section
+    <h2 class="section-header">Daily AQI Email Subscription</h2>
+    <div id="subscription-container" class="subscription-container">
+        <form id="subscription-form" novalidate>
+            <div class="subscription-grid">
+                <div class="field-group">
+                    <label for="sub-username">Username</label>
+                    <input id="sub-username" name="username" type="text" placeholder="Enter username" required>
+                </div>
+                <div class="field-group">
+                    <label for="sub-email">Email Address</label>
+                    <input id="sub-email" name="email" type="email" placeholder="example@email.com" required>
+                </div>
+                <div class="field-group">
+                    <label for="sub-city">City</label>
+                    <select id="sub-city" name="city" required>
+                        <option value="">Select city</option>
+                        {% for city in subscription_cities %}
+                            <option value="{{ city }}">{{ city }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="sub-time">Alert Time</label>
+                    <input id="sub-time" name="alert_time" type="time" placeholder="08:30" required>
+                </div>
+            </div>
+            <button id="sub-submit" type="submit">Subscribe</button>
+        </form>
+        <div id="subscription-message" class="subscription-message"></div>
+    </div> -->
+
+    <!-- AQI Legend -->
+    <div class="aqi-legend">
+        <h3>📊 Understanding Air Quality Levels</h3>
+        <div class="aqi-info-container">
+            <span class="aqi-info-item">AQI = Air Quality Number</span>
+            <span class="aqi-info-item green-text">Low number = Clean air ✅</span>
+            <span class="aqi-info-item red-text">High number = Dirty air ❌</span>
+        </div>
+        <div class="legend-grid">
+            <div class="legend-item legend-good">
+                <div class="range">0-50</div>
+                <div class="label">Good</div>
+                <div class="description">Air quality is satisfactory</div>
+            </div>
+            <div class="legend-item legend-moderate">
+                <div class="range">51-100</div>
+                <div class="label">Moderate</div>
+                <div class="description">Acceptable for most people</div>
+            </div>
+            <div class="legend-item legend-unhealthy-sg">
+                <div class="range">101-150</div>
+                <div class="label">Unhealthy for Sensitive Groups</div>
+                <div class="description">Sensitive groups may experience issues</div>
+            </div>
+            <div class="legend-item legend-unhealthy">
+                <div class="range">151-200</div>
+                <div class="label">Unhealthy</div>
+                <div class="description">General public may experience effects</div>
+            </div>
+            <div class="legend-item legend-hazardous">
+                <div class="range">201+</div>
+                <div class="label">Hazardous</div>
+                <div class="description">Health alert! Entire population at risk</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/main.js"></script>
+{% endblock %}
